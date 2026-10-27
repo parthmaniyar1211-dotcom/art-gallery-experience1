@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    background-color: #FAF8F5;
+    color: #171411;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #B8583B;
+    color: #FFFFFF;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D2C7B6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9C8C74;
+}
+
+/* Elegant animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Frame preview shadow effects */
+.frame-oak {
+  box-shadow: 0 20px 40px -10px rgba(78, 52, 26, 0.25), inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.frame-black {
+  box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.frame-walnut {
+  box-shadow: 0 22px 42px -10px rgba(45, 25, 12, 0.35), inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+
+.frame-canvas {
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.28);
+}
